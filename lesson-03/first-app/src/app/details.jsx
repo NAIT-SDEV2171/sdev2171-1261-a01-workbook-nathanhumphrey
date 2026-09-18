@@ -1,12 +1,11 @@
+import { useRouter } from "expo-router";
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, ScrollView, TextInput, Image, Pressable } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TextInput, Image, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Link, useRouter } from 'expo-router';
 
 export default function Home() {
-
   const router = useRouter();
-
+  
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar style="dark" />
@@ -19,22 +18,8 @@ export default function Home() {
           <Text style={styles.card.title}>Card Title</Text>
           <Text style={styles.card.body}>Card body text</Text>
         </View>
-        <View style={styles.card}>
-          <Text style={styles.card.title}>Card Title</Text>
-          <Text style={styles.card.body}>Card body text</Text>
-          <TextInput
-            defaultValue="A new text input component."
-            multiline
-            style={styles.textInput}
-            placeholder="Type whatever you like here"
-            placeholderTextColor="grey"></TextInput>
-        </View>
-        <Button style={{backgroundColor: '#f00'}} title="Go to Details" onPress={() => router.navigate('/details') } />
-        <Link style={{backgroundColor: '#f00'}} href="/details">
-          Go to Details
-        </Link>
-        <Pressable style={{backgroundColor: '#f00'}} onPress={() => router.navigate('/details') }>
-          <Text>Go to Details</Text>
+        <Pressable style={{backgroundColor: '#f00'}} onPress={() => router.back() }>
+          <Text>Go Home</Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>
