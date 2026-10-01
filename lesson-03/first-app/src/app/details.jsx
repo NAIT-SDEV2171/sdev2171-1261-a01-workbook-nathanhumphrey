@@ -2,23 +2,25 @@ import { useRouter } from "expo-router";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, TextInput, Image, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import HeaderText from '../components/HeaderText';
 
 export default function Home() {
   const router = useRouter();
-  
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar style="dark" />
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View>
           <Image style={styles.appImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
-          <Text style={styles.title}>Application Name</Text>
+          {/* Reusable component */}
+          <HeaderText>Application Name</HeaderText>
         </View>
         <View style={styles.card}>
           <Text style={styles.card.title}>Card Title</Text>
           <Text style={styles.card.body}>Card body text</Text>
         </View>
-        <Pressable style={{backgroundColor: '#f00'}} onPress={() => router.back() }>
+        <Pressable style={{ backgroundColor: '#f00' }} onPress={() => router.back()}>
           <Text>Go Home</Text>
         </Pressable>
       </ScrollView>

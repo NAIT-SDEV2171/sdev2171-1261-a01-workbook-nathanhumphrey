@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View, ScrollView, TextInput, Image, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link, useRouter } from 'expo-router';
+import HeaderText from '../components/HeaderText';
 
 export default function Home() {
 
@@ -13,7 +14,8 @@ export default function Home() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View>
           <Image style={styles.appImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
-          <Text style={styles.title}>Application Name</Text>
+          {/* Reusable component */}
+          <HeaderText>Application Name</HeaderText>
         </View>
         <View style={styles.card}>
           <Text style={styles.card.title}>Card Title</Text>
@@ -29,11 +31,11 @@ export default function Home() {
             placeholder="Type whatever you like here"
             placeholderTextColor="grey"></TextInput>
         </View>
-        <Button style={{backgroundColor: '#f00'}} title="Go to Details" onPress={() => router.navigate('/details') } />
-        <Link style={{backgroundColor: '#f00'}} href="/details">
+        <Button style={{ backgroundColor: '#f00' }} title="Go to Details" onPress={() => router.navigate('/details')} />
+        <Link style={{ backgroundColor: '#f00' }} href="/details">
           Go to Details
         </Link>
-        <Pressable style={{backgroundColor: '#f00'}} onPress={() => router.navigate('/details') }>
+        <Pressable style={{ backgroundColor: '#f00' }} onPress={() => router.navigate('/details')}>
           <Text>Go to Details</Text>
         </Pressable>
       </ScrollView>
