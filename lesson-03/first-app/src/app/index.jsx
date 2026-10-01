@@ -15,7 +15,7 @@ export default function Home() {
         <View>
           <Image style={styles.appImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
           {/* Reusable component */}
-          <HeaderText>Application Name</HeaderText>
+          <HeaderText style={styles.header}>Application Name</HeaderText>
         </View>
         <View style={styles.card}>
           <Text style={styles.card.title}>Card Title</Text>
