@@ -4,6 +4,7 @@ import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import StatePreviewCard from '../components/StatePreviewCard';
+import NewComp from '../components/NewComp';
 
 export default function DetailsScreen() {
   const router = useRouter();
@@ -27,6 +28,11 @@ export default function DetailsScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
+        <NewComp>
+          {/* children */}
+          <Text>Some new text</Text>
+          <Text>Some more new text</Text>
+        </NewComp>
         <Text style={styles.eyebrow}>Parent route</Text>
         <Text style={styles.title}>State And Props Screen</Text>
         <Text style={styles.body}>

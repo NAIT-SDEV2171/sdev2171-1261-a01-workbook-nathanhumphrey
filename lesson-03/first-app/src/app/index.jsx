@@ -37,6 +37,7 @@ export default function Home() {
           <Text>Go to Details</Text>
         </Pressable> */}
         <NavLink href="/details">Details Page</NavLink>
+        <NavLink href="/list-demo">List Demo Page</NavLink>
       </ScrollView>
     </SafeAreaView>
   );
