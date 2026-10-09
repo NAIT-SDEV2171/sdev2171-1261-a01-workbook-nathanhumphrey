@@ -20,7 +20,7 @@ export default function Home() {
         <FlatList
           style={styles.list}
           data={data}
-          keyExtractor={(item) => item.item}
+          keyExtractor={(item) => item}
           renderItem={(item) => <Text>{item.item}</Text>}
         />
       </View>
