@@ -19,6 +19,7 @@ export default function DetailsScreen() {
   ]);
 
   function handleAddStep() {
+    console.log('Draftstep: ', draftStep);
     const trimmedStep = draftStep.trim();
 
     if (trimmedStep.length === 0) {
