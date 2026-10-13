@@ -8,6 +8,7 @@ export default function Layout() {
       />
       <Stack.Screen name="details" options={{ title: 'Details' }} />
       <Stack.Screen name="list-demo" options={{ title: 'List Demo' }} />
+      <Stack.Screen name="fetch-demo" options={{ title: 'Fetch Demo' }} />
     </Stack>
   );
 }
