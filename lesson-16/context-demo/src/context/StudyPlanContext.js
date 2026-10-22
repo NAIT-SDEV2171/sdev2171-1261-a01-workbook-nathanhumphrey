@@ -7,7 +7,9 @@ export function StudyPlanProvider({ children }) {
 
   function toggleStep(step) {
     setSelectedSteps((currentSteps) => {
-      const alreadySelected = currentSteps.some((entry) => entry.id === step.id);
+      const alreadySelected = currentSteps.some(
+        (entry) => entry.id === step.id,
+      );
 
       if (alreadySelected) {
         return currentSteps.filter((entry) => entry.id !== step.id);
@@ -18,7 +20,9 @@ export function StudyPlanProvider({ children }) {
   }
 
   function removeStep(id) {
-    setSelectedSteps((currentSteps) => currentSteps.filter((step) => step.id !== id));
+    setSelectedSteps((currentSteps) =>
+      currentSteps.filter((step) => step.id !== id),
+    );
   }
 
   const value = {
@@ -27,7 +31,11 @@ export function StudyPlanProvider({ children }) {
     removeStep,
   };
 
-  return <StudyPlanContext.Provider value={value}>{children}</StudyPlanContext.Provider>;
+  return (
+    <StudyPlanContext.Provider value={value}>
+      {children}
+    </StudyPlanContext.Provider>
+  );
 }
 
 export function useStudyPlan() {
