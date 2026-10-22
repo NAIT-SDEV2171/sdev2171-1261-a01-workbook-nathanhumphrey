@@ -31,7 +31,7 @@ export default function FetchDemo() {
   }, []);
 
   return (
-    <Screen>
+    <Screen goBackText="Back to Home">
       <Card>
         <Text style={styles.title}>Fetched Data</Text>
         {/* {data.map((item, idx) => <Text key={idx}>{item}</Text>)} */}

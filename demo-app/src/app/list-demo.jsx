@@ -11,7 +11,7 @@ export default function ListDemo() {
   const [data, setData] = useState(['One', 'Two', 'Three']);
 
   return (
-    <Screen style={styles.safeArea}>
+    <Screen goBackText="Back to Home">
       <Card>
         <Text style={styles.title}>List</Text>
         {/* {data.map((item, idx) => <Text key={idx}>{item}</Text>)} */}

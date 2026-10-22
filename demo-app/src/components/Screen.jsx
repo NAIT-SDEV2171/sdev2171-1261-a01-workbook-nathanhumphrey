@@ -8,7 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/header/Header';
 import TextButton from './TextButton';
 
-export default function Screen({ useSafeAreaView = true, goHome = true, children }) {
+export default function Screen({ useSafeAreaView = true, goBackText = "Go Back", goHome: goBack = true, children }) {
   const router = useRouter();
 
   const filling = <>
@@ -16,7 +16,7 @@ export default function Screen({ useSafeAreaView = true, goHome = true, children
     {/* Reusable component */}
     <Header />
     {children}
-    {goHome && <TextButton onPress={() => router.back()}>Go Home</TextButton>}</>;
+    {goBack && <TextButton onPress={() => router.back()}>{goBackText}</TextButton>}</>;
 
   return useSafeAreaView ? (
     <SafeAreaView style={styles.safeArea}>

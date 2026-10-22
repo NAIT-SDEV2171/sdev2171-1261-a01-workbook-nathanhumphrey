@@ -3,7 +3,7 @@ import {
   ScrollView,
 } from 'react-native';
 import Screen from '../components/Screen';
-import NavLink from '../components/NavLink';
+import NavButton from '../components/NavButton';
 
 export default function Home() {
 
@@ -18,9 +18,10 @@ export default function Home() {
         <Pressable style={{ backgroundColor: 'rgb(6, 56, 68)' }} onPress={() => router.navigate('/details')}>
           <Text>Go to Details</Text>
         </Pressable> */}
-        <NavLink href="/details">Details Page</NavLink>
-        <NavLink href="/list-demo">List Demo Page</NavLink>
-        <NavLink href="/fetch-demo">Fetch Demo Page</NavLink>
+        <NavButton href="/details">Details Page</NavButton>
+        <NavButton href="/list-demo">List Demo Page</NavButton>
+        <NavButton href="/fetch-demo">Fetch Demo Page</NavButton>
+        <NavButton href="/context-demo">Context Demo Page</NavButton>
       </ScrollView>
     </Screen>
   );

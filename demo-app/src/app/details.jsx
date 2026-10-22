@@ -1,13 +1,10 @@
-import { useRouter } from "expo-router";
-import { StyleSheet, Text, View, ScrollView, Pressable } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import Screen from '../components/Screen';
 import Card from '../components/Card';
 
 export default function Details() {
-  const router = useRouter();
-
   return (
-    <Screen>
+    <Screen goBackText="Back to Home">
       {/* Working with basic components */}
       <ScrollView contentContainerStyle={styles.scrollContent} style={{ alignSelf: 'stretch' }}>
         <Card style={styles.card}>
