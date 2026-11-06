@@ -15,7 +15,8 @@ export function getApiBaseUrl() {
 }
 
 export const apiBaseUrlNotes = {
-  androidEmulator: 'Android emulator uses 10.0.2.2 for your computer localhost.',
+  androidEmulator:
+    'Android emulator uses 10.0.2.2 for your computer localhost.',
   iosSimulator: 'iOS simulator can use 127.0.0.1 for your computer localhost.',
   physicalDevice:
     'Physical devices need your computer LAN IP instead of localhost. Replace DEVICE_LAN_BASE_URL before testing on a phone.',

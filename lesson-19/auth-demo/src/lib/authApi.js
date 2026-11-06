@@ -40,7 +40,7 @@ export async function meRequest(token) {
       Authorization: `Bearer ${token}`,
     },
   });
-
+  
   return parseResponse(response);
 }
 
